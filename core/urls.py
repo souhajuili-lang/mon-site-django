@@ -2,6 +2,9 @@ from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from django.contrib import admin
+from django.urls import path
+from your_app_name import views  # Import your views here
 
 # --- NOTRE SCRIPT SECRET ---
 def create_admin(request):
@@ -11,7 +14,10 @@ def create_admin(request):
     return HttpResponse("<h1>👍 Le superuser existe déjà !</h1> <p>Va te connecter sur /admin/</p>")
 # ---------------------------
 
+# core/urls.py
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('setup-admin/', create_admin),  # <-- Le lien secret
+    path('setup-admin/', ...), # whatever you have here
+    path('', views.home_view, name='home'), # Add this line for the root URL
 ]

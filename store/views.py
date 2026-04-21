@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product
+from django.http import HttpResponse
 
-def store_home(request):
-    products = Product.objects.all() 
-    return render(request, 'store/home.html', {'products': products})
+def home_view(request):
+    return HttpResponse("Welcome to my Django site!")
 
 # --- ADD THIS NEW FUNCTION ---
 def product_detail(request, product_id):

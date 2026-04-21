@@ -26,11 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#^ta8y^%y9n^37b=zcmx8^ll$f3$f8uafkdhbp)a2afc*j%tv5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
+DEBUG = False
 
 
+ALLOWED_HOSTS = ['mon-site-django-aty2.onrender.com', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
